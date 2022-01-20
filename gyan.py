@@ -18,10 +18,10 @@ this_dir = 'C:/Home/Projects/Command_line_tool/' # You need to change this
 exists = False
 
 b = os.path.exists(this_dir + 'Learnings/')
-if not b: os.system('mkdir -p ' + this_dir + 'Learnings/')
+if not b: os.mkdir(this_dir + 'Learnings/')
 
 b = os.path.exists(this_dir + 'Learnings/' + cur_year)
-if not b: os.system('mkdir -p ' + this_dir + 'Learnings/' + cur_year)
+if not b: os.mkdir(this_dir + 'Learnings/' + cur_year)
 file_name = this_dir + 'Learnings/' + cur_year + '/' + cur_month + '.csv'
 # print(file_name)
 f = open(file_name, 'a')
