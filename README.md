@@ -35,3 +35,14 @@ gyan [learned_stuff] -m "This is a message"
 ```
 
 The application won't add a keyword more than once.
+
+The words will be saved in the folder named Learning.
+
+## Folder Structure
+- Learning
+    - 2022
+        - january.csv
+        - february.csv
+        - october.csv
+    - 2023
+        - march.csv
