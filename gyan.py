@@ -9,18 +9,20 @@ parser.add_argument('-m', type=str, nargs='*', default='')
 args = parser.parse_args()
 
 mydate = datetime.datetime.now()
-cur_month = mydate.strftime("%B")
-cur_year = mydate.strftime("%Y").lower()
-cur_week = mydate.strftime("%A").lower()
+cur_month = mydate.strftime("%B").lower()
+cur_year = mydate.strftime("%Y")
+# cur_week = mydate.strftime("%A").lower()
 
-this_dir = 'C:/Home/Projects/Command_line_tool/'
+this_dir = 'C:/Home/Projects/Command_line_tool/' # You need to change this
 
 exists = False
-try:
-    os.mkdir(this_dir + 'Learnings/' + cur_month + '_' + cur_year)
-except:
-    pass
-file_name = this_dir + 'Learnings/' + cur_month + '_' + cur_year + '/' + cur_week + '.csv'
+
+b = os.path.exists(this_dir + 'Learnings/')
+if not b: os.system('mkdir -p ' + this_dir + 'Learnings/')
+
+b = os.path.exists(this_dir + 'Learnings/' + cur_year)
+if not b: os.system('mkdir -p ' + this_dir + 'Learnings/' + cur_year)
+file_name = this_dir + 'Learnings/' + cur_year + '/' + cur_month + '.csv'
 # print(file_name)
 f = open(file_name, 'a')
 f.close()
