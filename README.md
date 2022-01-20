@@ -27,7 +27,8 @@ You can just open the terminal and type
 gyan [learned_stuff]
 ```
 It will add the ```[learned_stuff]``` to a csv file named after the current month which
-will be in a folder named after the year.
+will be in a folder named after the year, and this folder will be in a folder
+called ```Learnings``` in the root directory.
 You can also add a message about the ```[learned_stuff]``` like the following:
 ```
 gyan [learned_stuff] -m "This is a message"
@@ -35,8 +36,6 @@ gyan [learned_stuff] -m "This is a message"
 ```
 
 The application won't add a keyword more than once.
-
-The words will be saved in the folder named Learning.
 
 ## Folder Structure
 - Learning
